@@ -1,0 +1,12 @@
+2a60927148abd1d33b818b535e306557
+::res://::1686612548
+export_presets.cfg::TextFile::-1::1686272355::0::1::::<><>::
+::res://Exports/::1686272402
+::res://Opal/::1686268579
+Grass Block.png::CompressedTexture2D::1918346919205223371::1686082192::1686082195::1::::<><>::
+icon.png::CompressedTexture2D::8015394041756907595::1683738924::1685951064::1::::<><>::
+Level.tscn::PackedScene::8280483435344003407::1686266248::0::1::::<><>::uid://2li5m4suidyp
+Main.gd::GDScript::-1::1686268579::0::1::::<>Node<>::
+Main.tscn::PackedScene::3437777310393454999::1686268579::0::1::::<><>::res://Opal/Main.gd<>uid://dp8el8mgtaj64
+Player.gd::GDScript::-1::1686256598::0::1::::<>CharacterBody2D<>::
+Player.tscn::PackedScene::4632558872298556577::1686266248::0::1::::<><>::res://Opal/Player.gd<>uid://dmgymslqcuw8r

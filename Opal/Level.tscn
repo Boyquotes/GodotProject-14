@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dp8el8mgtaj64"]
+
+[ext_resource type="Texture2D" uid="uid://2li5m4suidyp" path="res://Opal/Grass Block.png" id="1_jxccg"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oqcjr"]
+texture = ExtResource("1_jxccg")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="TileSet" id="TileSet_rui4t"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+terrain_set_0/mode = 0
+sources/1 = SubResource("TileSetAtlasSource_oqcjr")
+
+[node name="Level" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_rui4t")
+cell_quadrant_size = 64
+format = 2
+layer_0/tile_data = PackedInt32Array(589824, 1, 0, 589825, 1, 0, 589826, 1, 0, 589827, 1, 0, 589828, 1, 0, 589829, 1, 0, 589830, 1, 0, 589831, 1, 0, 589832, 1, 0, 589833, 1, 0, 589834, 1, 0, 589835, 1, 0, 589836, 1, 0, 589837, 1, 0, 589838, 1, 0, 589839, 1, 0, 589840, 1, 0, 589841, 1, 0)

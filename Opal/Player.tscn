@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://b7abtkm4q78wr"]
+
+[ext_resource type="Script" path="res://Opal/Player.gd" id="1_5kyum"]
+[ext_resource type="Texture2D" uid="uid://dmgymslqcuw8r" path="res://Opal/icon.png" id="1_hpe08"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2acsd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hpe08")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kxamu"]
+size = Vector2(64, 64)
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_gtk1u"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/sync = true
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(576, 324)
+collision_layer = 2
+script = ExtResource("1_5kyum")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_2acsd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_kxamu")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_gtk1u")
