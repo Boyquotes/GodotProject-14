@@ -13,8 +13,8 @@ func _enter_tree():
 func _ready():
 	if not is_multiplayer_authority(): return
 	
-	# setup current camera for player
-	# any other player-specific setup goes here
+	# TO-DO: setup current camera for player
+	# NOTE: any other peer-specific setup goes here
 
 func _physics_process(delta):
 	if not is_multiplayer_authority(): return
@@ -24,12 +24,12 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 
 	# Handle Jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_just_pressed("sidescroller_jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction = Input.get_axis("ui_left", "ui_right")
+	var direction = Input.get_axis("input_left", "input_right")
 	if direction:
 		velocity.x = direction * SPEED
 	else:
